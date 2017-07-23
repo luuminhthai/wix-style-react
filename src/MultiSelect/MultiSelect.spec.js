@@ -86,7 +86,7 @@ describe('multiSelect', () => {
     driver.clickOnInputWrapper();
     expect(inputDriver.isFocus()).toBeTruthy();
     expect(driver.inputWrapperHasFocus()).toBeTruthy();
-  })
+  });
 
   it('should contain specific tags', () => {
     const tags = [{id: 'Alabama', label: 'Alabama'}, {id: 'Alaska', label: 'Alaska'}];
