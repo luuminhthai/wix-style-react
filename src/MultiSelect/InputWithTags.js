@@ -22,11 +22,11 @@ class InputWithTags extends React.Component {
 
   handleInputFocus() {
     this.input.focus();
-    this.setState({inputHasFocus: true})
+    this.setState({inputHasFocus: true});
   }
 
   handleInputBlur() {
-    this.setState({inputHasFocus: false})
+    this.setState({inputHasFocus: false});
   }
 
   render() {
@@ -54,7 +54,7 @@ class InputWithTags extends React.Component {
 
           <Input
             ref={input => this.input = input}
-            onBlur={this.handleInputBlur.bind(this)}
+            onBlur={() => this.handleInputBlur()}
             placeholder={tags.length === 0 ? placeholder : ''}
             {...desiredProps}
             disabled={disabled}

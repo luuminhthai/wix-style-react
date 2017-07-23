@@ -75,7 +75,7 @@ class MultiSelect extends InputWithOptions {
       const visibleOptions = unselectedOptions.filter(this.props.predicate);
       const maybeNearestOption = visibleOptions[0];
 
-      if (!!maybeNearestOption) {
+      if (maybeNearestOption) {
         this.onSelect(maybeNearestOption);
       }
     }
