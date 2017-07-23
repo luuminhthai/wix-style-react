@@ -2,14 +2,14 @@ import React, {Children} from 'react';
 import {any} from 'prop-types';
 import WixComponent from '../../BaseComponents/WixComponent';
 import styles from './RangeInputWithLabelComposite.scss';
-import classNames from 'classnames'
+import classNames from 'classnames';
 
 class RangeInputWithLabelComposite extends WixComponent {
   constructor(props) {
     super(props);
     this.state = {
       hasFocus: false
-    }
+    };
   }
 
   _doKeyDown(e) {
@@ -27,12 +27,12 @@ class RangeInputWithLabelComposite extends WixComponent {
     }
   }
 
-  _handleFocus(e) {
+  _handleFocus() {
     this.setState({hasFocus: true});
   }
 
-  _handleBlur(e) {
-    this.setState({hasFocus: false})
+  _handleBlur() {
+    this.setState({hasFocus: false});
   }
 
   render() {
@@ -55,7 +55,6 @@ class RangeInputWithLabelComposite extends WixComponent {
       onBlur: e => this._handleBlur(e)
     };
 
-    const hasFocus = firstInput
     const inputWrapperClassNames = classNames({
       [styles.inputs]: true,
       [styles.hasFocus]: this.state.hasFocus
