@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WixComponent from '../BaseComponents/WixComponent';
-import styles from './ToggleSelectionItem.scss';
+import {item, button, text, icon} from './ToggleSelectionItem.scss';
 import typography from '../../src/Typography';
 import classNames from 'classnames';
 
@@ -15,10 +15,11 @@ class ToggleSelectionItem extends WixComponent {
   };
 
   render() {
+    const {selected} = this.props
     return (
-      <li className={classNames(typography.t3, styles.menuItem)}>
-        <button type="button" className={styles.button} onClick={this.props.onClick}>
-          <span className={styles.icon}>{this.props.icon}</span><span className={styles.text}>{this.props.text}</span>
+      <li className={classNames(typography.t3, item, {selected})}>
+        <button type="button" className={button} onClick={this.props.onClick}>
+          <span className={icon}>{this.props.icon}</span><span className={text}>{this.props.text}</span>
         </button>
       </li>
     );

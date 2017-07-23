@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import {Close} from 'wix-style-react/Icons';
-import {Too} from '../../src/index';
+import {ToggleSelection, ToggleSelectionItem} from '../../src/index';
 
 export class Form extends Component {
 
@@ -34,21 +34,10 @@ export class Form extends Component {
 
     const {dropdownTheme: theme, ...rest} = this.props;
     return (
-      <ButtonWithOptions {...rest} theme={theme}>
-        <ButtonWithOptions.Button
-          disabled={this.props.disabled}
-          height={this.props.height}
-          theme={this.props.theme}
-          {...icons}
-          >
-          {this.props.iconOnly ? <Close size={iconSize}/> : this.props.text}
-        </ButtonWithOptions.Button>
-        <ButtonWithOptions.Option id="1">Option 1</ButtonWithOptions.Option>
-        <ButtonWithOptions.Option id="2">Option 2</ButtonWithOptions.Option>
-        <ButtonWithOptions.Option id="3" disabled>Option 3</ButtonWithOptions.Option>
-        <ButtonWithOptions.Option id="4"><Close size={iconSize}/> Option 4</ButtonWithOptions.Option>
-        <ButtonWithOptions.Option id="5">Option 5</ButtonWithOptions.Option>
-      </ButtonWithOptions>
+      <ToggleSelection>
+        <ToggleSelectionItem text="one"/>
+        <ToggleSelectionItem text="two"/>
+      </ToggleSelection>
     );
   }
 

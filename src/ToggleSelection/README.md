@@ -1,4 +1,4 @@
-# ButtonWithOptions component
+# ToggleSelection component
 
 > options component for Button. (Click to see in action)
 
@@ -16,6 +16,6 @@
 | restrainDropdownSize | bool | true | - | Restrain dropdown width to button's width |
 | ***All of the Button's and DropdownLayout Props are also available for this component*** | | | | |
 
-> ButtonWithOptions.Button - the Button component to be used
+> ToggleSelection.Button - the Button component to be used
 
-> ButtonWithOptions.Option - an option to be used for the dropdown - must contain an id
+> ToggleSelection.Option - an option to be used for the dropdown - must contain an id

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import WixComponent from '../BaseComponents/WixComponent'
 import styles from './ToggleSelection.scss'
 import ToggleSelectionItem from '../ToggleSelectionItem'
+import classNames from 'classnames';
 
 class ToggleSelection extends WixComponent {
   static propTypes = {
@@ -19,8 +20,8 @@ class ToggleSelection extends WixComponent {
 
   render() {
     const {disabled, selectedItemIndex, onChange} = this.props
-    const isSelected = selectedItemIndex === i
     const items = React.Children.map(this.props.children, (child, i) => {
+    const isSelected = selectedItemIndex === i
       const {onClick, ...passThroughProps} = child.props
       const onItemClick = () => {
         if (!isSelected) {
@@ -36,8 +37,8 @@ class ToggleSelection extends WixComponent {
     })
 
     return (
-      <ul>
-        items
+      <ul className={classNames(styles.menu)}>
+        {items}
       </ul>
     )
   }

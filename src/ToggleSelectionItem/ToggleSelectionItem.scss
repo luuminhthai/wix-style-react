@@ -30,10 +30,14 @@
 	}
 }
 
-.menuItem {
-	& + & {
-		margin-top: 6px;
-	}
+.item {
+	display: inline;
+	background-color: $D80;
+}
+
+.selected {
+	border-radius: 6px;
+	border: solid 1px $B10;
 }
 
 .button {
